@@ -1,7 +1,5 @@
 "use strict";
 
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
-
 //  表格驗證 (第七周助教直播)
 var constraints = {
   '套票名稱': {
@@ -93,13 +91,13 @@ function getData() {
   // LV2 資料
   axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json').then(function (res) {
     //  res -- response
-    res.data.data, _readOnlyError("data"); //  渲染選單
+    data = res.data.data; //  渲染選單
 
     renderSelect(data); //  渲染卡片
 
     renderCard(data);
   })["catch"](function () {
-    alert('錯誤!!');
+    alert('錯誤');
   });
 } //  渲染卡片
 
@@ -167,14 +165,21 @@ function addTicket(e) {
       imgUrl: ticketImgUrl.value,
       area: ticketRegion.value,
       description: ticketDescription.value,
-      group: ticketNum.value,
-      price: ticketPrice.value,
-      rate: ticketRate.value
+      group: Number(ticketNum.value),
+      price: Number(ticketPrice.value),
+      rate: Number(ticketRate.value)
     }; // 把新資料加入 data 中
 
     data.push(ticket); // 渲染卡片
 
-    renderCard(data); // 清空表格
+    renderCard(data); //  渲染下拉地區選單
+
+    renderSelect(data);
+
+    var _searchSelect = document.querySelector('.searchSelect');
+
+    _searchSelect.value = '';
+    searchText.textContent = ''; // 清空表格
 
     ticketForm.reset();
   }
