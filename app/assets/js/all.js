@@ -57,7 +57,7 @@ const constraints = {
 
 
 //  data
-const data = [];
+let data = [];
 
 //  DOM
 //    選取 id 用 getElementById   //  選取 class 用 querySelector
@@ -103,7 +103,7 @@ function getData() {
       renderCard(data);
     })
     .catch(() => {
-      alert('錯誤!!');
+      alert('錯誤');
     })
 }
 
@@ -206,9 +206,9 @@ function addTicket(e) {
       imgUrl: ticketImgUrl.value,
       area: ticketRegion.value,
       description: ticketDescription.value,
-      group: ticketNum.value,
-      price: ticketPrice.value,
-      rate: ticketRate.value,
+      group: Number(ticketNum.value),
+      price: Number(ticketPrice.value),
+      rate: Number(ticketRate.value),
     };
 
     // 把新資料加入 data 中
@@ -216,6 +216,13 @@ function addTicket(e) {
 
     // 渲染卡片
     renderCard(data);
+
+    //  渲染下拉地區選單
+    renderSelect(data);
+
+    const searchSelect = document.querySelector('.searchSelect');
+    searchSelect.value = '';
+    searchText.textContent = '';
 
     // 清空表格
     ticketForm.reset();

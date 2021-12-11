@@ -14,8 +14,8 @@ current: index
         <img class="img-fluid mb-9" src="./assets/images/undraw_Traveling_re_weve (1).png">
         <img class="img-fluid" src="./assets/images/Let’s Travel !.png">
       </div>
-      <!-- 新增表單 #addTicketForm-->
-      <form class="addTicketForm col">
+      <!-- 新增表單 #TicketForm-->
+      <form class="TicketForm col">
         <h1 class="border-bottom border-3 border-primary text-primary fw-bolder fs-5 pb-1 mb-15">
           <i class="bi bi-plus-circle fs-7"></i>
           新增旅遊套票
@@ -104,34 +104,28 @@ current: index
       </select>
       <!-- 本次搜尋筆數 searchText-->
       <p class="searchText text-secondary-light"></p>
+      <div id="chart" class="ms-auto"></div>
     </div>
     <!-- 套票卡片區 cardList-->
     <ul class="cardList list-unstyled mb-0 row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
-      <li class="col">
+      <!-- <li class="col">
         <a class="card h-100 shadow" href="#">
-          <!-- imgUrl -->
           <div class="cardImg position-relative" style="background-image: url('assets/images/photo-1.png')">  
-            <!-- area -->
             <div class="position-absolute top-0 start-0 translate-middle-y bg-primary-light px-9 py-3 text-white fs-7">台北</div>
-            <!-- rate -->
             <div class="position-absolute top-100 start-0 translate-middle-y bg-primary px-3 py-2 text-center text-white">8.6</div>          
           </div>
           <div class="card-body">
-            <!-- name -->
             <h3 class="card-title border-bottom border-primary border-2 fs-5 fw-bolder">
               綠島自由行套裝行程
             </h3>
-            <!-- description -->
             <p class="cardDescription mb-15 text-secondary-light lh-lg">
               嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
             </p>
             <div class="d-flex justify-content-between align-items-center text-primary fw-bolder">
-              <!-- group -->
               <p>
                 <i class="bi bi-exclamation-circle-fill"></i>
                 剩下最後8組
               </p>
-              <!-- price -->
               <p class="d-flex justify-content-between align-items-center">
                 <span class="me-3 fw-bold">TWD</span>
                 <span class="fs-3">$1,280</span>
@@ -209,8 +203,7 @@ current: index
             <div class="d-flex justify-content-between align-items-center text-primary fw-bolder">
               <p >
                 <i class="bi bi-exclamation-circle-fill"></i>
-                <!-- 剩下最後 <span >8</span> 組 -->
-                限時搶購
+                剩下最後 <span >8</span> 組
               </p>
               <p class="d-flex justify-content-between align-items-center">
                 <span class="me-3 fw-bold">TWD</span>
@@ -271,7 +264,7 @@ current: index
             </div>
           </div>
         </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </section>
