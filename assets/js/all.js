@@ -173,12 +173,9 @@ function addTicket(e) {
     data.push(ticket); // 渲染卡片
 
     renderCard(data); //  渲染下拉地區選單
+    // renderSelect(data);
 
-    renderSelect(data);
-
-    var _searchSelect = document.querySelector('.searchSelect');
-
-    _searchSelect.value = '';
+    searchSelect.value = '';
     searchText.textContent = ''; // 清空表格
 
     ticketForm.reset();
