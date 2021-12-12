@@ -218,9 +218,9 @@ function addTicket(e) {
     renderCard(data);
 
     //  渲染下拉地區選單
-    renderSelect(data);
+    // renderSelect(data);
 
-    const searchSelect = document.querySelector('.searchSelect');
+    
     searchSelect.value = '';
     searchText.textContent = '';
 
